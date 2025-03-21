@@ -107,11 +107,17 @@ public class E03AVLTree<T> {
 
         int valor = comparator.compare(value, root.value);
 
-        if (valor < 0) {
+        if (valor < 0)
+        {
             root.left = delete(root.left, value, decrementSize);
-        } else if (valor > 0) {
+        }
+
+        else if (valor > 0)
+        {
             root.right = delete(root.right, value, decrementSize);
-        } else {
+        }
+
+        else {
             if (decrementSize) {
                 size--;
             }
